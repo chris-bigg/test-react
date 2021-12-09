@@ -1,12 +1,20 @@
-import logo from "./Trollface_non-free.png";
 import "./App.css";
+
+function Card({ menuItem, price }) {
+  return (
+    <div>
+      <p className="text-3xl">{menuItem}</p>
+      <p>{price}</p>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo object-none" alt="logo" />
-      </header>
+    <div>
+      <Card menuItem="Burger" price="$15.00" />
+      <Card menuItem="XL Pizza" price="$20.00" />
+      <Card menuItem="Sandwich" price="$5.99" />
     </div>
   );
 }
